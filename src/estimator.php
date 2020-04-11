@@ -69,7 +69,9 @@ $outputData = array(
 	'severeImpact' => $severeImpact
 );
 
-$data = json_encode($ouputData);
+$data = json_encode($outputData);
 /*$ouputData = covid19ImpactEstimator($data);
 
 echo json_encode($ouputData);*/
+
+echo $data;
