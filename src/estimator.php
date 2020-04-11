@@ -4,6 +4,8 @@ function covid19ImpactEstimator($data)
 {
   return $data;
 }
+
+
 $inputData  = array( 
 		'region' => array(       
 			'name'=> "Africa",       
@@ -63,16 +65,18 @@ $severeImpact = array (
 );
 
 //Output Data
-$estimate = array(
-	'impact' =>$impact,
+/*$estimate = array(
+	'impact' => $impact,
 	'severeImpact' => $severeImpact
-);
+);*/
 $outputData = array(
 	'data' => $inputData,
-	'estimate' => $estimate,
+	'impact' => $impact,
+	'severeImpact' => $severeImpact,
 );
 
 $data = json_encode($outputData);
-$ouputData = covid19ImpactEstimator($data);
 
-//echo $data;
+$out = covid19ImpactEstimator($data);
+
+echo $out;
